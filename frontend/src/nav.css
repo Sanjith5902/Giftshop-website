@@ -1,0 +1,44 @@
+.menu-bar{
+    background:linear-gradient(90deg, #601264,#ff06b4);
+    min-height: 100px;
+}
+.navbar-brand{
+    color:white ;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar-brand:hover
+{color:white;
+    transform: scale(1.1);
+}
+.nav-link:hover {
+  color: #c71bf7 ;
+  background-color: white;
+  border-radius: 20px;
+  
+}
+.nav-link{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.navbar .form-control{
+  border-radius: 20px;
+}
+.navbar .btn{
+    border-radius: 20px;
+    color: rgb(171, 170, 171);
+    background-color: white;
+    border: none;
+}
+.navbar .form{
+    gap:10px;
+}
+.d-flex{
+    gap:8px;
+}

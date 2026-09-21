@@ -1,0 +1,180 @@
+.trend {
+  width: 100%;
+  padding: 50px 5%;
+  background-color: #fff5f9;
+  overflow: hidden;
+}
+
+
+
+
+.trend2 {
+  text-align: center;
+  font-family: "Asul", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ff1871;
+  margin-bottom: 35px;
+}
+
+.trend .row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 25px;
+  
+overflow-y: hidden;
+overflow-x:auto;
+  padding: 10px 5px 25px;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.trend .row::-webkit-scrollbar {
+  display: none;
+}
+
+.trend .col-lg-3,
+.trend .col-md-6 {
+  flex: 0 0 280px;
+  width: 280px;
+  max-width: 280px;
+  padding: 0;
+}
+
+
+.trend-card {
+  width: 100% !important;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.trend .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 24, 113, 0.2);
+}
+
+.trend .card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.trend .card-body {
+  padding: 18px;
+}
+
+.trend .card-title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.trend .card-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff1871;
+  margin-bottom: 18px;
+}
+
+
+
+.trend .btn {
+  border: none;
+  border-radius: 25px;
+  padding: 9px 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.trend .cartadd {
+  background-color: #ff1871;
+  color: white;
+}
+
+.trend .cartadd:hover {
+  background-color: #e6005c;
+}
+
+.trend .view {
+  background-color: #333;
+  color: white;
+}
+
+.trend .view:hover {
+  background-color: #111;
+}
+
+
+@media (max-width: 768px) {
+
+  .trend.main {
+    padding: 40px 20px;
+  }
+
+  .trend2 {
+    font-size: 32px;
+  }
+
+  .trend .row {
+    gap: 18px;
+  }
+
+  .trend .col-lg-3,
+  .trend .col-md-6 {
+    flex: 0 0 250px;
+    width: 250px;
+    max-width: 250px;
+  }
+
+  .trend .card-img-top {
+    height: 220px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .trend.main {
+    padding: 35px 15px;
+  }
+
+  .trend2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .trend .row {
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+
+  .trend .col-lg-3,
+  .trend .col-md-6 {
+    flex: 0 0 220px;
+    width: 220px;
+    max-width: 220px;
+  }
+
+  .trend .card-img-top {
+    height: 200px;
+  }
+
+  .trend .card-body {
+    padding: 15px;
+  }
+}
