@@ -1,5 +1,5 @@
 .main-banner{
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -19,6 +19,7 @@
   z-index: 2;
 }
 .slider-side{
+   
   width: 700px;
   height: 550px;
   z-index: 1;

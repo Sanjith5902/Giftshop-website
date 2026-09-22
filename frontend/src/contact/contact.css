@@ -1,0 +1,242 @@
+.h1_contact{
+    width: 100%;
+
+    margin-bottom: 20px;
+    color: blueviolet;
+    
+}
+.line1{
+   display: flex;
+    gap: 40px;
+}
+.container{
+    position: relative;
+   overflow: hidden;
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 25px rgb(129, 129, 129);
+    border-radius: 20px;
+   padding: 60px;
+    transition: 0.4s ease;
+    z-index: 0;
+    
+}
+.container::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(96, 18, 100, 0.1);
+      background-color: rgba(203, 89, 169, 0.15);
+    border-radius: 50%;
+    bottom: -20px;
+    left: -10px;
+    pointer-events: none;
+    z-index:-1;
+    transition: 0.4s ease;
+}
+.container:hover::before {
+    transform: scale(1.5);
+
+}
+
+
+
+.container::after {
+    position: absolute;
+    content:"";
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color: rgb(218, 112, 245,0.45);
+    top:-50px;
+    right: -70px;
+    transition: 0.4s ease;
+}
+.container:hover::after {
+    transform: scale(1.5);
+
+}
+
+.container:hover{
+    transform: translateY(-8px);
+
+}
+.line1 > div {
+    flex: 1;
+}
+.container input{
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid #c3c2c2;
+     box-shadow: 0 5px 25px rgb(206, 206, 206);
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.4s ease;
+}
+.container input:hover{
+    transform: translatey(-3px);
+
+}
+.container textarea{
+    width: 100%;
+      background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 25px rgb(206, 206, 206);
+    border-radius: 10px;
+    border: 1px solid #c3c2c2;
+   
+    height: 150px;
+    
+   
+    margin-bottom: 20px
+}
+.buttonstyle{
+    background-color: #601264;
+    border: none;
+    height: 50px;
+    width: 100px;
+    margin: auto;
+    display: block;
+    transition: 0.4s ease;
+    
+}
+.buttonstyle:hover{
+    transform: scale(1.1);
+    background-color: #945397;
+    
+}
+
+.flex_contact{display: flex;
+    flex-direction: row;
+    
+    
+
+}
+.container2{
+    max-width: 650px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin: auto;
+min-height: 800px;
+    padding: 20px;
+    width: 700px;
+    background: linear-gradient(180deg, #601264, #cb59a9);
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+.contact_social{
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    gap: 20px;
+    border:1px solid rgb(98, 97, 97);
+    
+
+    border-radius: 10px;
+    display: flex;
+    background-color: rgba(178, 177, 177, 0.5);
+    backdrop-filter: blur(8px);
+    transition: 0.4s ease;
+
+}
+.contact_social:hover{
+    transform: translateY(-8px);
+
+}
+.contact_social h4{
+    color: #ffffff;
+    font-size: larger;
+    font-weight: 400;
+}
+.contact_social h5{
+    color: #ffffff;
+    font-size: larger;
+    font-weight: 400;
+
+}
+.contact_social i{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height:50px;
+    
+    border-radius: 50%;
+    font-size: x-large;
+    font-weight:bolder;
+color: #4b0f6d;
+    background-color: #ffffff;
+}
+
+.contact_head{
+    margin: 50px;
+    color: #ffffff;
+
+}
+.contact_sub{
+    margin: 50px;
+    color: #ffffff;
+
+}
+
+    
+
+.container2:hover{
+    transform: translateY(-8px);
+
+}
+
+.container2::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border:1px solid #362243;
+    
+    border-radius: 50%;
+    bottom: -50px;
+    right: -20px;
+    pointer-events: none;
+    z-index:-1;
+    transition: 0.4s ease;
+}
+.container2:hover::before {
+    transform: scale(1.5);
+
+}
+
+
+
+.container2::after {
+    position: absolute;
+    content:"";
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color: rgb(218, 112, 245,0.45);
+    top:-50px;
+    left: -70px;
+    transition: 0.4s ease;
+}
+.container2:hover::after {
+    transform: scale(1.5);
+}
+
+
+@media (max-width: 768px) {
+    .flex_contact{display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+}
+}

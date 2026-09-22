@@ -2,12 +2,14 @@
 import { useState } from "react";
 import products from "../shoppingpage/product";
 import "./shopping.css";
-
+import { Routes, Route,useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-function ProductList() {
+
+function ProductList({addToCart}) {
+  const navigate = useNavigate();
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("default");
 
@@ -43,6 +45,10 @@ function ProductList() {
   const handleSearch = () => {
     setSearchText(search);
   };
+const handleAddToCart = (product) => {
+  addToCart(product);
+  navigate("/cart");
+};
 
   return (
     <div className="shop">
@@ -135,14 +141,14 @@ function ProductList() {
                     Price: ₹{product.price}
                   </Card.Text>
 
-                  <Button className="me-2 cartadd">
+                  <Button onClick={() => handleAddToCart(product)} className="me-2 cartadd">
                     Add To Cart
                   </Button>
 
                   <Button
                     className="view"
                     variant="primary"
-                  >
+                  onClick={()=>navigate(`/product/${product.id}`)}>
                     View
                   </Button>
 

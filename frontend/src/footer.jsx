@@ -32,7 +32,7 @@ function Footerbase() {
             <div className="copyright">
                 © 2026 LuxeGift. All Rights Reserved.
             </div>
-
+                            
         </div>
     );
 }

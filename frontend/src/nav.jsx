@@ -2,7 +2,7 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import { Routes, Route,Link } from "react-router";
+import { Routes, Route,NavLink,Link } from "react-router";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import reactLogo from "./assets/logo1.png";
@@ -30,18 +30,26 @@ function NavScrollExample() {
         className="mx-auto my-2 my-lg-0"
         navbarScroll
       >
-        <Nav.Link as={Link} to="/">Home</Nav.Link>
-        <Nav.Link as={Link} to="/shopping">Shop</Nav.Link>
-        <Nav.Link as={Link} to="/about">About</Nav.Link>
+        <NavLink  to="/" className={({ isActive}) =>
+    isActive ? "luze luzeactive" : "luze"
+  }>Home</NavLink>
+        <NavLink to="/shopping" className={({ isActive}) =>
+    isActive ? "luze luzeactive" : "luze"
+  }>Shop</NavLink>
+        <NavLink to="/about"className={({ isActive}) =>
+    isActive ? "luze luzeactive" : "luze"
+  }>About</NavLink>
        
-        <Nav.Link href="#action4">Contact</Nav.Link>
+        <NavLink to="/contact" className={({ isActive}) =>
+    isActive ? "luze luzeactive" : "luze"
+  }>Contact</NavLink>
       </Nav>
 
       <Form className="d-flex">
         
-        <Button >
-          <i className="bi bi-cart"></i>
-        </Button>
+       <Button as={Link} to="/cart">
+    <i className="bi bi-cart"></i>
+  </Button>
         <Button >
           <i className="bi bi-person"></i>
         </Button>
