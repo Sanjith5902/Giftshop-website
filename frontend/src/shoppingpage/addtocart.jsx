@@ -1,14 +1,11 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./addtocart.css";
+import { useState,useContext } from "react";
+import { shopContext } from "../context";
 
-function AddToCart({
-  cart,
-  increaseQuantity,
-  decreaseQuantity,
-  removeFromCart
-}) {
-
+function AddToCart() {
+ const {cart,increaseQuantity,decreaseQuantity,removeFromCart} = useContext(shopContext);
   const totalItems = cart.reduce(
     (total, item) => total + item.quantity,
     0
@@ -36,8 +33,6 @@ function AddToCart({
 
         <div className="cart-content">
 
-          {/* PRODUCTS */}
-
           <div className="cart-products">
 
             {cart.map((item) => (
@@ -63,8 +58,6 @@ function AddToCart({
                     <Card.Text>
                       ₹{item.price}
                     </Card.Text>
-
-                    {/* QUANTITY */}
 
                     <div className="quantity">
 
@@ -92,8 +85,6 @@ function AddToCart({
 
                     </div>
 
-                    {/* REMOVE */}
-
                     <Button
                       variant="danger"
                       className="remove-button"
@@ -114,8 +105,6 @@ function AddToCart({
 
           </div>
 
-
-          {/* SUMMARY */}
 
           <Card className="summary-card">
 
@@ -156,7 +145,7 @@ function AddToCart({
               <div className="summary-total">
 
                 <span>
-                  Total
+                  Total: 
                 </span>
 
                 <strong>

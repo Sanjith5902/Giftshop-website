@@ -1,6 +1,3 @@
-/* =========================
-   CART PAGE
-========================= */
 
 .cart-container {
   min-height: 100vh;
@@ -8,7 +5,6 @@
   background: linear-gradient(135deg, #fff7f0, #f8f9ff);
 }
 
-/* Heading */
 
 .cart-heading {
   text-align: center;
@@ -30,9 +26,6 @@
 }
 
 
-/* =========================
-   MAIN CONTENT
-========================= */
 
 .cart-content {
   display: flex;
@@ -44,10 +37,6 @@
   flex: 1;
 }
 
-
-/* =========================
-   PRODUCT CARD
-========================= */
 
 .cart-card {
   border: none !important;
@@ -70,10 +59,6 @@
 }
 
 
-/* =========================
-   PRODUCT IMAGE
-========================= */
-
 .cart-image {
   width: 190px !important;
   height: 190px;
@@ -82,10 +67,6 @@
   border-radius: 22px;
 }
 
-
-/* =========================
-   PRODUCT DETAILS
-========================= */
 
 .cart-card .card-body {
   padding: 25px;
@@ -105,9 +86,6 @@
 }
 
 
-/* =========================
-   QUANTITY
-========================= */
 
 .quantity {
   display: flex;
@@ -147,9 +125,6 @@
 }
 
 
-/* =========================
-   REMOVE BUTTON
-========================= */
 
 .remove-button {
   margin-top: 15px;
@@ -164,10 +139,6 @@
   transform: scale(1.04);
 }
 
-
-/* =========================
-   ORDER SUMMARY
-========================= */
 
 .summary-card {
   width: 360px;
@@ -191,7 +162,6 @@
 }
 
 
-/* Summary rows */
 
 .summary-row {
   display: flex;
@@ -202,73 +172,41 @@
   font-size: 16px;
 }
 
-.summary-row strong {
-  color: #222;
-  font-size: 17px;
-}
-
-
-/* Total */
-
-.summary-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 22px 0;
-  font-size: 21px;
+.summary-total{
+   font-size: 24px;
   font-weight: 700;
-  color: #222;
+  color: #009812;
+  margin-bottom: 20px;
+
 }
-
-.summary-total strong {
-  color: #ff5a5f;
-  font-size: 24px;
+.pay-button{
+  background-color: #317b00;
+  border: none;
+  height: 50px;
+  width: 150px;
 }
-
-
-/* =========================
-   PROCEED TO PAY
-========================= */
-
-.pay-button {
-  width: 100%;
-  padding: 13px !important;
-  border: none !important;
-  border-radius: 12px !important;
-  font-size: 17px !important;
-  font-weight: 600 !important;
-  transition: 0.3s ease;
-}
-
-.pay-button:hover {
+.pay-button:hover{
+  background-color: #23cf00;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: none;
+  height: 50px;
+  width: 150px;
 }
-
-
-/* =========================
-   EMPTY CART
-========================= */
-
-.empty-cart {
-  background: white;
-  max-width: 500px;
-  margin: 80px auto;
-  padding: 60px 30px;
+.pay-button:active{
+  transform: scale(0.9);
+  background-color: #008626;
+  border: none;
+  height: 50px;
+  width: 150px;
+}
+.empty-cart{
   text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
+  font-size: 42px;
 
-.empty-cart h4 {
-  color: #555;
-  font-size: 22px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 
 @media (max-width: 900px) {
 

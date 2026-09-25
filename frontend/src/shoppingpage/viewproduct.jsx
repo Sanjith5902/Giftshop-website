@@ -1,26 +1,39 @@
 import { useParams,useNavigate } from "react-router";
 import products from "../shoppingpage/product";
+import trend from "../homepage/trending";
 import Button from "react-bootstrap/Button";
 import './viewproduct.css';
-function ProductDetails({ addToCart }) {
-     
+import { useState,useContext } from "react";
+import {shopContext} from "../context";
+function ProductDetails() {
+  const { addToCart } = useContext(shopContext);
   const navigate = useNavigate();
-    const { id } = useParams();
-    const product = products.find((p) => p.id === Number(id));
+     const { type, id } = useParams();
+   let product;
+
+    if (type === "trending") {
+
+        product = trend.find(
+            (p) => p.id === Number(id)
+        );
+
+    } else if (type === "product") {
+
+        product = products.find(
+            (p) => p.id === Number(id)
+        );
+    }
 
     if (!product) {
-        return (
-            <>
-                <h4>no product found</h4>
-            </>
-        )
+        return <h4>No product found</h4>;
     }
-     const handleAddToCart = () => {
 
-    addToCart(product);
+    const handleAddToCart = () => {
 
-    navigate("/cart");
-  };
+        addToCart(product);
+
+        navigate("/cart");
+    };
     return (
         <div className="view_container">
             <img className="image_view" src={product.image} />

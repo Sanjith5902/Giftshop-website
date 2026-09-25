@@ -1,5 +1,6 @@
 
 import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import { Routes, Route,NavLink,Link } from "react-router";
@@ -50,9 +51,19 @@ function NavScrollExample() {
        <Button as={Link} to="/cart">
     <i className="bi bi-cart"></i>
   </Button>
-        <Button >
-          <i className="bi bi-person"></i>
-        </Button>
+<div className="ms-auto">
+ <Dropdown align="end">
+      <Dropdown.Toggle variant="success">
+        Profile <i className="bi bi-person"></i>
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu >
+        <Dropdown.Item as={Link} to="/login">Login</Dropdown.Item>
+        <Dropdown.Item as={Link} to="/profile">Admin</Dropdown.Item>
+        <Dropdown.Item as={Link} to="/profile">Profile</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+        </div>
       </Form>
 
     </Navbar.Collapse>

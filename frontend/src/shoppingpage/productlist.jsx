@@ -1,14 +1,16 @@
 
-import { useState } from "react";
+import { useState,useContext } from "react";
 import products from "../shoppingpage/product";
 import "./shopping.css";
 import { Routes, Route,useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { shopContext } from "../context";
 
 
-function ProductList({addToCart}) {
+function ProductList() {
+  const { addToCart } = useContext(shopContext);
   const navigate = useNavigate();
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("default");
@@ -17,10 +19,10 @@ function ProductList({addToCart}) {
   const [searchText, setSearchText] = useState("");
   const categories = ["All", ...new Set(products.map((p) => p.category))];
 
-  let visibleProducts =
+  let visibleProducts =(
     category === "All"
       ? products
-      : products.filter((p) => p.category === category);
+      : products.filter((p) => p.category === category));
 
   if (searchText.trim() !== "") {
     visibleProducts = visibleProducts.filter(
@@ -75,10 +77,7 @@ const handleAddToCart = (product) => {
         </Button>
       </div>
 
-      {/* Controls */}
       <div className="shop-controls">
-
-        {/* Categories */}
         <div className="category">
           {categories.map((cat) => (
             <button
@@ -94,8 +93,6 @@ const handleAddToCart = (product) => {
             </button>
           ))}
         </div>
-
-        {/* Sort */}
         <select
           className="sort-select"
           value={sort}
@@ -108,7 +105,6 @@ const handleAddToCart = (product) => {
 
       </div>
 
-      {/* Products */}
       {visibleProducts.length === 0 ? (
         <div className="empty-state">
           <p>No gifts found.</p>
@@ -148,7 +144,7 @@ const handleAddToCart = (product) => {
                   <Button
                     className="view"
                     variant="primary"
-                  onClick={()=>navigate(`/product/${product.id}`)}>
+                  onClick={()=>navigate(`/product/product/${product.id}`)}>
                     View
                   </Button>
 

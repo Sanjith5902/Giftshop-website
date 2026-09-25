@@ -42,7 +42,7 @@ function Contact() {
             
 
         </div>
-        <div className='container'>
+        <div className='container1'>
             <div>
                 <h1 className='h1_contact'>Contact us</h1>
                 <div className='line1'>

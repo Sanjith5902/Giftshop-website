@@ -9,11 +9,12 @@
    display: flex;
     gap: 40px;
 }
-.container{
+.container1{
     position: relative;
    overflow: hidden;
     margin: 40px auto;
-    max-width: 600px;
+    width: 650px;
+    max-width: 700px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 25px rgb(129, 129, 129);
     border-radius: 20px;
@@ -22,7 +23,7 @@
     z-index: 0;
     
 }
-.container::before {
+.container1::before {
     content: "";
     position: absolute;
     width: 120px;
@@ -36,14 +37,14 @@
     z-index:-1;
     transition: 0.4s ease;
 }
-.container:hover::before {
+.container1:hover::before {
     transform: scale(1.5);
 
 }
 
 
 
-.container::after {
+.container1::after {
     position: absolute;
     content:"";
     height: 180px;
@@ -54,19 +55,19 @@
     right: -70px;
     transition: 0.4s ease;
 }
-.container:hover::after {
+.container1:hover::after {
     transform: scale(1.5);
 
 }
 
-.container:hover{
+.container1:hover{
     transform: translateY(-8px);
 
 }
 .line1 > div {
     flex: 1;
 }
-.container input{
+.container1 input{
     padding: 5px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -77,11 +78,11 @@
     margin-bottom: 20px;
     transition: 0.4s ease;
 }
-.container input:hover{
+.container1 input:hover{
     transform: translatey(-3px);
 
 }
-.container textarea{
+.container1 textarea{
     width: 100%;
       background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 25px rgb(206, 206, 206);
@@ -232,11 +233,12 @@ color: #4b0f6d;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .flex_contact{display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 20px;
 
 }
 }

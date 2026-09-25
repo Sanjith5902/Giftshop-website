@@ -1,14 +1,19 @@
 
 import NavScrollExample from './nav.jsx'
 import Footerbase from './footer.jsx';
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { Routes, Route } from "react-router";
+import { shopContext } from './context.jsx';
 import Home from './homepage/home.jsx'
 import ProductList from './shoppingpage/productlist.jsx'
 import About from './about/about.jsx'
 import Contact from './contact/contact.jsx'
 import ProductDetails from './shoppingpage/viewproduct.jsx'
 import AddToCart from './shoppingpage/addtocart.jsx'
+import Login from './loginpage/Loginpage.jsx';  
+import Register from './loginpage/Register.jsx'
+import Forgetlogin from './loginpage/Forgetlogin.jsx';
+import Profile from './loginpage/profile.jsx'
 import './App.css'
 function App() {
   const [cart, setCart] = useState([]);
@@ -86,30 +91,29 @@ function App() {
   };
 
   return (
+    <shopContext.Provider value={{ cart, addToCart,increaseQuantity,decreaseQuantity,removeFromCart}}>
     <div className="App">
       <NavScrollExample />
       <Routes>
         
         <Route path="/" element={<Home />} />
-        <Route path="/shopping" element={<ProductList addToCart={addToCart}/>}/>
+        <Route path="/shopping" element={<ProductList/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/product/:id" element={<ProductDetails addToCart={addToCart} />}/>
-<Route
-        path="/cart"
-        element={
-          <AddToCart
-            cart={cart}
-            increaseQuantity={increaseQuantity}
-            decreaseQuantity={decreaseQuantity}
-            removeFromCart={removeFromCart}
-          />
-        }
-      />
+        <Route path="/product/:type/:id"
+    element={<ProductDetails />}/>
+        <Route path="/cart" element={<AddToCart/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
+      <Route path="/forget" element={<Forgetlogin/>}/>
+      <Route path="/profile" element={<Profile/>}/>
+
       </Routes>
+      
       <Footerbase/>
     </div>
-    
+   
+    </shopContext.Provider>
   );
 
 }

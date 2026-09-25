@@ -1,0 +1,92 @@
+.login_image {
+  width: 220px ;
+  height: 220px ;
+  object-fit: contain ;
+  display: block;
+
+}
+.login_name{
+  text-align:center ;
+    width: 100%;
+ margin: 10px; 
+  font-size: 30px;
+  font-weight: 700;
+  color: #601264;
+  
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ height: 800px; 
+ margin: auto;
+}
+.login_card{
+  box-shadow: 0px 8px 20px rgb(0, 0, 0,0.5);
+  display: flex;
+  margin: 40px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  width: 450px;
+  overflow: hidden;
+  height: 600px;
+  padding-bottom: 60px;
+  transition: 0.4s ease;
+
+}
+.login_card:hover{
+  
+  transform: translateY(-5px);
+  
+}
+.login_cd{
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+ 
+}
+.login_cd::after{
+  position: absolute;
+  content: "";
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: rgb(133, 34, 225,0.5);
+
+bottom: -150px; ;
+left: 220px;
+}
+.login_cd::before{
+  position: absolute;
+  content: "";
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  
+  border: 4px solid  rgb(133, 34, 225,0.5) ;
+
+top: -100px; ;
+right: 220px;
+}
+
+
+.login_name{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(226, 43, 159);
+  font-size: 30px;
+}
+.login_text{
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  padding: 10px;
+  min-height: 40px;
+  background-color: white;
+  box-shadow: 0px 8px 20px rgb(0, 0, 0,0.5);
+}

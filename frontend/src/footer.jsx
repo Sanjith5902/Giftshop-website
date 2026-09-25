@@ -1,11 +1,12 @@
 import './footer.css'
 import Button from 'react-bootstrap/Button';
+import { Routes, Route,NavLink,Link } from "react-router";
 function Footerbase() {
     return (
         <div className='footer-bg'>
             <div className='foot-contact'>
                 <h2>Keep it touch</h2><br></br>
-                <Button className='bttn3'>contact us</Button><br></br><br></br>
+                <Button className='bttn3' as={Link} to="/contact">contact us</Button><br></br><br></br>
                 <h6>Have questions or need assistance? Get in touch with us<br></br>we’re always happy to help you find the perfect gift.</h6>
                 <div className='foot-social'>
                     <i className="bi bi-instagram"></i>
